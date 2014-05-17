@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22D10E9A-4532-40B8-935E-9F12C6DF7FFF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickSamples</RootNamespace>
+    <AssemblyName>QuickSamples</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\Lib\Autofac.3.1.5\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\Lib\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\..\Lib\FluentValidation.5.1.0.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\Lib\NHibernate33\net\4.0\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\Lib\Quick\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Lib\Quick\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\Lib\Quick\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\Lib\Quick\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\Lib\NHibernate33\net\4.0\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\Lib\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickFramework">
+      <HintPath>..\..\Lib\Quick\QuickFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickFramework.Autofac">
+      <HintPath>..\..\Lib\Quick\QuickFramework.Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickFramework.Caching.MongoDBCacheRepository">
+      <HintPath>..\..\Lib\Quick\QuickFramework.Caching.MongoDBCacheRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickFramework.Log4Net">
+      <HintPath>..\..\Lib\Quick\QuickFramework.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickFramework.NHibenateRepository">
+      <HintPath>..\..\Lib\Quick\QuickFramework.NHibenateRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheModel\UserDTO.cs" />
+    <Compile Include="CommandHandler\Command\ChangeUserNameCommand.cs" />
+    <Compile Include="Common\Vial\Class1.cs" />
+    <Compile Include="EventHandler\Events\ChangeUserNameEvent.cs" />
+    <Compile Include="EventHandler\Events\Class1.cs" />
+    <Compile Include="EventHandler\Handler\ChaneUserNameEventHandler.cs" />
+    <Compile Include="EventHandler\Handler\CrateUserEventHandler.cs" />
+    <Compile Include="TestCase.cs" />
+    <Compile Include="CommandHandler\Command\SaveComand.cs" />
+    <Compile Include="CommandHandler\Handler\SaveUserCommandHandler.cs" />
+    <Compile Include="Common\WithIn.cs" />
+    <Compile Include="Domain\Mapping\AddressMapping.cs" />
+    <Compile Include="Domain\Mapping\UserMapping.cs" />
+    <Compile Include="Domain\User\User.cs" />
+    <Compile Include="Domain\User\Address.cs" />
+    <Compile Include="Module\PersistenceModule.cs" />
+    <Compile Include="Module\SystemModule.cs" />
+    <Compile Include="Domain\User\Order.cs" />
+    <Compile Include="Domain\User\OrderState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Domain\ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

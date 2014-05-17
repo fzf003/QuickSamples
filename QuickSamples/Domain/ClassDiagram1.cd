@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QuickSamples.Domain.User">
+    <Position X="0.75" Y="0.5" Width="2" />
+    <AssociationLine Name="ContactAddress" Type="QuickSamples.Domain.Address">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.423" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAARABACAAAAAACAAAQAgAAAAAAAECAYABAAAAAAE=</HashCode>
+      <FileName>Domain\User\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ContactAddress" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Orders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="QuickSamples.Domain.Address" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Domain\User\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuickSamples.Domain.Order">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\User\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderState" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="QuickSamples.Domain.OrderState">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\User\OrderState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

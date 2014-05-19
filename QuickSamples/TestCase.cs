@@ -54,11 +54,7 @@ namespace QuickSamples
         [Test]
         public void ChangeName()
         {
-            //User userinfo = new User();
-            ////02a3b505-5a55-4124-8174-8e0b0723f1aa
-            //WithIn.Change<User>((user) => {
-            //   userinfo= user.FindById("02a3b505-5a55-4124-8174-8e0b0723f1aa");
-            //});
+          
 
             ObjectFactory.GetService<ICommandBus>()
                 .SendCommand<ChangeUserNameCommand>(new ChangeUserNameCommand() {
